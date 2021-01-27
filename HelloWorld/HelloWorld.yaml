@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: myregistry29665.azurecr.io/helloworld:2.0
+        image: <ACR login server>/helloworld:2.0
 
 ---
 apiVersion: v1
