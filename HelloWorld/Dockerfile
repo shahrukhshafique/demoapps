@@ -21,6 +21,7 @@ FROM mcr.microsoft.com/dotnet/aspnet
 
 # Copy from the first image (DevEnv) binaries
 COPY --from=DevEnv /app/out .
-
+#
+EXPOSE 80
 # Define the process to be executed in the container
 ENTRYPOINT [ "dotnet", "HelloWorld.dll" ]
