@@ -6,7 +6,6 @@ pipeline {
             steps {
                 echo 'Hello this is Build stage'
                 sh '''
-                rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
                 yum install dotnet-sdk-5.0
                 yum install dotnet-runtime-5.0
                 '''
