@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello this is Build stage'
-                dotnetBuild sdk: 'DOTNET-5.0', workDirectory: '.'    
+                dotnetRestore sdk: 'DOTNET-5.0', workDirectory: '.'    
             }
         }
         stage('Test') {
