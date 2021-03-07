@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello this is Build stage'
+                echo 'Hello this is Build stage, revised'
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello this is test stage'
+                echo 'Hello this is test stage, revised'
             }
         }
         stage('deploy') {
