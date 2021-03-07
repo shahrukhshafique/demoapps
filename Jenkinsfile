@@ -5,9 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello this is Build stage'
-                dotnet('DOTNET-5.0'){
-                    sh 'dotnet build'
-                }
+                sh 'dotnetBuild'
             }
         }
         stage('Test') {
