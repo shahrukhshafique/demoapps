@@ -8,6 +8,7 @@ pipeline {
                 dotnet('DOTNET-5.0'){
                     sh 'dotnet build'
                 }
+            }
         }
         stage('Test') {
             steps {
