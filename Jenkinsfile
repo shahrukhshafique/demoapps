@@ -4,12 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello this is Build stage, revised'
-            }
+                echo 'Hello this is Build stage'
+                dotnet('DOTNET-5.0'){
+                    sh 'dotnet build'
+                }
         }
         stage('Test') {
             steps {
-                echo 'Hello this is test stage, revised'
+                echo 'Hello this is test stage'
             }
         }
         stage('deploy') {
