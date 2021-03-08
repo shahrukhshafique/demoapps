@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello this is Build stage'
-                docker build .
+                docker build ./HelloWorld/
                 //dotnetBuild sdk: 'DOTNET-5.0', workDirectory: 'HelloWorld'
             }
         }
