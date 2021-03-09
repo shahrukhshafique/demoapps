@@ -1,5 +1,6 @@
 # Define base image that includes dev tools
-FROM mcr.microsoft.com/dotnet/sdk:5.0 as DevEnv
+#FROM mcr.microsoft.com/dotnet/sdk:5.0 as DevEnv
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 
 # Create a folder
 WORKDIR /app
