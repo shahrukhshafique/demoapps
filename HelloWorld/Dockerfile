@@ -1,6 +1,6 @@
 # Define base image that includes dev tools
 #FROM mcr.microsoft.com/dotnet/sdk:5.0 as DevEnv
-FROM mcr.microsoft.com/dotnet/sdk:5.0 as mybase
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 
 # Create a folder
 WORKDIR /app
@@ -18,10 +18,10 @@ COPY . ./
 RUN dotnet publish -c Release -o /app/out
 
 # Download another images with aspnet runtime
-FROM mcr.microsoft.com/dotnet/aspnet
+#FROM mcr.microsoft.com/dotnet/aspnet
 
 # Copy from the first image (DevEnv) binaries
-COPY --from=mybase /app/out .
+#COPY --from=mybase /app/out .
 #
 EXPOSE 80
 # Define the process to be executed in the container
